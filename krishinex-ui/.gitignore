@@ -27,6 +27,4 @@ Thumbs.db
 *.joblib
 *.pickle
 
-# Ignore all node_modules everywhere
-node_modules/
-**/node_modules/
+
