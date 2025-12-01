@@ -1,0 +1,28 @@
+import csv
+import os
+
+os.makedirs(os.path.dirname(__file__), exist_ok=True)
+
+rows = [
+    # N, P, K, pH, temperature(C), humidity(%), rainfall(mm), crop
+    [120, 55, 240, 7.2, 22.0, 65, 5.0, "Wheat"],
+    [110, 50, 230, 7.1, 24.0, 70, 3.0, "Wheat"],
+    [90, 40, 180, 6.8, 28.0, 75, 8.0, "Rice"],
+    [115, 60, 245, 7.3, 26.0, 80, 12.0, "Rice"],
+    [85, 42, 175, 6.5, 30.0, 60, 2.0, "Cotton"],
+    [95, 45, 190, 6.7, 29.0, 58, 4.0, "Cotton"],
+    [70, 30, 150, 6.4, 32.0, 55, 1.0, "Millet"],
+    [75, 35, 160, 6.6, 31.0, 50, 1.5, "Millet"],
+    [100, 48, 200, 6.9, 25.0, 72, 10.0, "Sugarcane"],
+    [105, 50, 210, 7.0, 27.0, 78, 15.0, "Sugarcane"],
+    [95, 43, 185, 6.8, 23.0, 68, 6.0, "Maize"],
+    [92, 41, 178, 6.6, 24.0, 66, 5.5, "Maize"],
+]
+
+csv_path = os.path.join(os.path.dirname(__file__), "crop_training.csv")
+with open(csv_path, "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerow(["N", "P", "K", "pH", "temperature", "humidity", "rainfall", "crop"])
+    writer.writerows(rows)
+
+print(f"Created training CSV at: {csv_path}")

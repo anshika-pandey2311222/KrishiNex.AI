@@ -1,0 +1,8 @@
+state,district,N,P,K,pH,soil_type
+Uttar Pradesh,Kanpur,120,55,240,7.2,Alluvial
+Uttar Pradesh,Lucknow,110,50,230,7.1,Alluvial
+Maharashtra,Pune,90,40,180,6.8,Red
+Maharashtra,Nagpur,85,42,175,6.5,Black
+Bihar,Patna,115,60,245,7.3,Alluvial
+Karnataka,Bengaluru,75,35,160,6.6,Laterite
+Tamil Nadu,Chennai,70,30,150,6.4,Coastal
